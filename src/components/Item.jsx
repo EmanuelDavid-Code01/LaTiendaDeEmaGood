@@ -34,7 +34,7 @@ const Item = ({ id, precio, category,image, title, oferta }) => {
             </ListGroup.Item>
           </ListGroup>
           <Link to={`/itemdetail/${id}`}>
-            <Button variant="outline-success"> Detalle</Button>
+            <Button variant="success"> Detalle</Button>
           </Link>
         </Card.Body>
       </Card>

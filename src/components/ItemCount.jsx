@@ -64,7 +64,7 @@ const ItemCount = ({ id, title, precio, image, stock }) => {
       >
         <Button
           style={{ width: "10rem", marginLeft: "2rem" }}
-          variant="outline-primary"
+          variant="success"
           className="justify-content-md-center"
           onClick={addropaToCart}
           as={Link}

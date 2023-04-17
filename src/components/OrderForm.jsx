@@ -75,7 +75,7 @@ const OrderForm = () => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
-              placeholder="ingrese su email"
+              placeholder="Ejemplo@gmail.com"
               onChange={(e) => SetEmail(e.target.value)}
             />
             <Form.Text className="text-muted"></Form.Text>
@@ -90,10 +90,10 @@ const OrderForm = () => {
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label>Nombre:</Form.Label>
+            <Form.Label>Nombre y apellido:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="ingrese su nombre"
+              placeholder="....Julian"
               onChange={(e) => SetName(e.target.value)}
             />
             <Form.Text className="text-muted"></Form.Text>
@@ -106,6 +106,7 @@ const OrderForm = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          
         }}
       >
         <Form
@@ -114,77 +115,80 @@ const OrderForm = () => {
             handleSubmit(e);
           }}
         >
-        <Form.Group className="mb-3" controlId="formBasicText">
-          <Form.Label>Apellido:</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="ingrese su apellido"
-            onChange={(e) => SetLastName(e.target.value)}
-          />
-          <Form.Text className="text-muted"></Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicText">
-          <Form.Label>Telefono:</Form.Label>
-          <Form.Control
-            type="number"
-            placeholder="ingrese su telefono"
-            onChange={(e) => SetPhone(e.target.value)}
-          />
-          <Form.Text className="text-muted"></Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicText">
-          <Form.Label>Direccion:</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="ingrese su direccion"
-            onChange={(e) => SetAddress(e.target.value)}
-          />
-          <Form.Text className="text-muted"></Form.Text>
-        </Form.Group>
-        </Form>
-      </div>
-      <Modal
-        show={show}
-        onHide={() => {
-          handleClose();
-          clearCart();
-        }}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Compra Confirmada</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          El total de su compra es :<strong>${cartprecioTotal()}</strong>
-        </Modal.Body>
-        <Modal.Body>
-          El ID de su compra es:<strong>{orderId}</strong>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="outline-primary"
-            onClick={() => {
+          <Form.Group className="mb-3" controlId="formBasicText">
+            <Form.Label>Apellido:</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="ingrese su apellido"
+              onChange={(e) => SetLastName(e.target.value)}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicText">
+            <Form.Label>Telefono:</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="113456-4232"
+              onChange={(e) => SetPhone(e.target.value)}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicText">
+            <Form.Label>Localidad:</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Gral San martin"
+              onChange={(e) => SetAddress(e.target.value)}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+          </Form.Group>
+          <Modal
+            show={show}
+            onHide={() => {
               handleClose();
               clearCart();
             }}
-            as={Link}
-            to="/"
+            backdrop="static"
+            keyboard={false}
           >
-            Volver al Catalogo
+            <Modal.Header closeButton>
+              <Modal.Title>Realizo su compra con exito</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Total de la compra :<strong>${cartprecioTotal()}</strong>
+            </Modal.Body>
+            <Modal.Body>
+              Orden  :<strong>{orderId}</strong>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button
+                variant="success"
+                onClick={() => {
+                  handleClose();
+                  clearCart();
+                }}
+                as={Link}
+                to="/"
+              >
+                Volver al Catalogo
+              </Button>
+            </Modal.Footer>
+          </Modal>
+          <Popover show={showPopover} placement="bottom">
+            <Popover.Body>
+              Los datos ingreasados no son correctos, por favor vuelva a ingresarlos.
+            </Popover.Body>
+          </Popover>
+          <br />
+          <Button variant="success" type="submit">
+            Continuar con la compra
           </Button>
-        </Modal.Footer>
-      </Modal>
-
-      <Button variant="outline-primary" type="submit">
-        Comprar
-      </Button>
-
-      <Popover show={showPopover} placement="bottom">
-        <Popover.Body>
-          Los E-mails no coinciden o no se ingreso ningun E-mail.
-        </Popover.Body>
-      </Popover>
+          <br />
+          <br />
+          <br />
+          <br />
+        </Form>
+      </div>
     </>
   );
 };
