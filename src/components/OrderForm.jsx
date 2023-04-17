@@ -125,7 +125,7 @@ const OrderForm = () => {
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label>Telefono:</Form.Label>
+            <Form.Label>Teléfono:</Form.Label>
             <Form.Control
               type="number"
               placeholder="113456-4232"
@@ -152,7 +152,7 @@ const OrderForm = () => {
             keyboard={false}
           >
             <Modal.Header closeButton>
-              <Modal.Title>Realizo su compra con exito</Modal.Title>
+              <Modal.Title>Realizó su compra con éxito</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               Total de la compra :<strong>${cartprecioTotal()}</strong>
@@ -170,7 +170,7 @@ const OrderForm = () => {
                 as={Link}
                 to="/"
               >
-                Volver al Catalogo
+                Volver al Catálogo
               </Button>
             </Modal.Footer>
           </Modal>

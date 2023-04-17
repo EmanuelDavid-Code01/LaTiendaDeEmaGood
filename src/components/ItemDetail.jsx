@@ -19,10 +19,10 @@ const ItemDetail = ({ data, id }) => {
               {" "}
               <h3>{data.title}</h3>{" "}
             </Card.Title>
-            <h4>Descripcion:</h4>
+            <h4>Descripción:</h4>
             <Card.Text>{data.description}</Card.Text>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>Categoria: {data.category}</ListGroup.Item>
+              <ListGroup.Item>Categoría: {data.category}</ListGroup.Item>
               <ListGroup.Item>Stock: {data.stock}</ListGroup.Item>
               <ListGroup.Item>
                 Precio:{" "}

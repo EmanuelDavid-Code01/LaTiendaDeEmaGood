@@ -24,7 +24,7 @@ const NavBar = () => {
                 />{" "}
               </Navbar.Brand>
               <Nav.Link as={Link} to="/">
-                Catalogo
+                Catálogo
               </Nav.Link>
               <Nav.Link as={Link} to={`/oferta/${true}`}>
                 Ofertas

@@ -19,7 +19,7 @@ const Item = ({ id, precio, category,image, title, oferta }) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <ListGroup className="list-group-flush">
-            <ListGroup.Item>Categoria: {category}</ListGroup.Item>
+            <ListGroup.Item>Categoría: {category}</ListGroup.Item>
             <ListGroup.Item>
               {oferta ? (
                 <>
