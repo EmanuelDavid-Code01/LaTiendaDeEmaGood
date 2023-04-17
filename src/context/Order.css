@@ -1,7 +1,4 @@
-/* .fondoOrder{
-    background: rgb(0,0,36);
-background: linear-gradient(90deg, rgba(0,0,36,0.9640231092436975) 13%, rgba(0,146,255,0.9640231092436975) 49%, rgba(9,51,121,1) 85%);
-} */
+
 body{
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);

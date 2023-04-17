@@ -4,7 +4,7 @@ import Badge from "react-bootstrap/Badge";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, precio, category, image, title, oferta }) => {
+const Item = ({ id, precio, category,image, title, oferta }) => {
   const descuento = precio / 2;
 
   return (
@@ -23,7 +23,7 @@ const Item = ({ id, precio, category, image, title, oferta }) => {
             <ListGroup.Item>
               {oferta ? (
                 <>
-                  Precio: <del>${precio}</del> <Badge bg="danger">Oferta</Badge>{" "}
+                  Precio: <del>${precio}</del> <Badge bg="success">Oferta</Badge>{" "}
                   <strong>${descuento}</strong>
                 </>
               ) : (

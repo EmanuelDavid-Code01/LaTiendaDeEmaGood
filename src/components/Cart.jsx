@@ -49,7 +49,7 @@ const Cart = () => {
       <Table responsive hover style={{width:'36rem'}}>
         <thead >
           <tr >
-            <th colSpan={4}>Total De Compras</th>
+            <th colSpan={4}>Compras</th>
           </tr>
         </thead>
         <tbody >
@@ -68,8 +68,8 @@ const Cart = () => {
       </div>
             ):(
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop:'2rem'}}>
-                <h3>El Carrito Esta Vacio</h3>
-                <Button variant="outline-primary" size="lg" as={Link} to="/">Volver al Catalogo</Button>
+                <h3>Carrito vacio</h3>
+                <Button variant="outline-primary" size="lg" as={Link} to="/">Ir al Catalogo</Button>
               </div>
             )}
     </div>
